@@ -1,33 +1,17 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Animé Gem Collector</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <h1>💎 Gem Collector</h1>
-        <div id="stats">
-            Coins: <span id="coin-count">1000</span> | 
-            Cartes: <span id="card-count">0</span>/1000
+<!-- À mettre dans la fonction addCardToInventory de ton script.js -->
+<div class="card ${rarityClass}">
+    <div class="card-inner">
+        <div class="card-glow"></div>
+        <div class="card-header">
+            <span class="card-id">#${id}</span>
+            <span class="card-rarity">${rarityName}</span>
         </div>
-    </header>
-
-    <main>
-        <section id="shop">
-            <button onclick="buyPack()">Ouvrir un Pack (100 Coins)</button>
-        </section>
-
-        <section id="inventory">
-            <h2>Ma Collection</h2>
-            <div id="card-grid" class="grid"></div>
-        </section>
-    </main>
-
-    <!-- Console Admin Secrète -->
-    <div id="admin-trigger" onclick="checkAdmin()"></div>
-
-    <script src="script.js"></script>
-</body>
-</html>
+        <div class="card-image">
+            <img src="https://api.dicebear.com{id}" alt="Gem">
+        </div>
+        <div class="card-info">
+            <div class="card-name">Pierre d'Animé</div>
+            <div class="card-stats">💎 Valeur: ${power}</div>
+        </div>
+    </div>
+</div>
